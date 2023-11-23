@@ -13,7 +13,7 @@ export const Todo = ({ id, title, completed }) => {
   const checkStyle = completed
     ? 'bg-checked bg-no-repeat bg-[right]'
     : 'bg-unchecked bg-no-repeat bg-[right]'
-  // const destroyButtonStyle = ''
+
   const taskCompleted = completed ? 'line-through text-[#d9d9d9] ' : ''
   return (
     <div className={`border-t-2 text-2xl p-3 h-16 flex  gap-x-6 relative `}>
@@ -28,7 +28,7 @@ export const Todo = ({ id, title, completed }) => {
 
       <p className={`w-full text-start ${taskCompleted}`}>{title}</p>
       <button
-        className='text-red-600/50 font-medium hidden after:content-["x"] group-hover:block absolute right-0 pr-3'
+        className='text-red-600/50 font-semibold hidden after:content-["x"] group-hover:block absolute right-0 pr-3'
         onClick={handleClick}
       ></button>
     </div>
